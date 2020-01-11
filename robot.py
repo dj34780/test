@@ -1,13 +1,17 @@
 import wpilib
-import ctre
+import wpilib.drive
 import time
+import ctre
 
-class MyRobot(wpilib.TimedRobot):
+class MyRobot(wpilib.TimedRobot): 
     def robotInit(self):
-        self.motor = ctre.WPI_TalonSRX(15)
+        print("init")
+        self.motor ctre.WPI_TalonSRX(15)
         self.motor.set(.5)
+        print("motor on right")
         time.sleep(3)
         self.motor.set(0)
-        time.sleep(5)
-        self.motor.set(-1)
-        time.sleep(7)
+        print("motor stop")
+
+if __name__ == "__main__":
+    wpilib.run(MyRobot)
